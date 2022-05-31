@@ -226,7 +226,7 @@
   <div class="gdoc-toc gdoc-toc__level--6"><nav id="TableOfContents"><ul>
         <li><a href="#overview">Overview</a>
           <ul>
-            <li><a href="#hub-agent-architecture">&ldquo;Hub-agent&rdquo; architecture</a></li>
+            <li><a href="#hub-spoke-architecture">&ldquo;Hub-spoke&rdquo; architecture</a></li>
             <li><a href="#modularity-and-extensibility">Modularity and extensibility</a></li>
           </ul>
         </li>
@@ -277,8 +277,8 @@ the hub cluster and consistently reconciles the physical Kubernetes cluster
 to the expected state.</p>
 </li>
 </ul>
-<h3 id="hub-agent-architecture">&ldquo;Hub-agent&rdquo; architecture</h3>
-<p>Benefiting from the merit of &ldquo;hub-agent&rdquo; architecture, in abstraction we
+<h3 id="hub-spoke-architecture">&ldquo;Hub-spoke&rdquo; architecture</h3>
+<p>Benefiting from the merit of <a href="https://en.wikipedia.org/wiki/Spoke%E2%80%93hub_distribution_paradigm">&ldquo;hub-spoke&rdquo;</a> architecture, in abstraction we
 are de-coupling most of the multi-cluster operations generally into
 (1) computation/decision and (2) execution, and the actual execution against
 the target cluster will be completely off-loaded into the managed cluster. The
@@ -346,6 +346,9 @@ either brutally deleting the agent instances or revoking the granted RBAC
 permissions for the agents. Note that the hub controller will be automatically
 preparing environment for the newly registered cluster and cleaning up neatly
 upon kicking a managed cluster.</p>
+<div style="text-align: center; padding: 20px;">
+   <img src="/double-optin-registration.png" alt="Clusterset" style="margin: 0 auto; width: 60%">
+</div>
 <h3 id="cluster-namespace">Cluster namespace</h3>
 <p>Kubernetes has a native soft multi-tenancy isolation in the granularity of
 its namespace resources, so in OCM, for each of the managed cluster we will
