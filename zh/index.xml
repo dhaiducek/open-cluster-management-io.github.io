@@ -17,7 +17,7 @@
       <guid>http://open-cluster-management.io/zh/community/releases/</guid>
       <description>Open Cluster Management has approximately a three to four month release cycle. The current release is v0.7.0. Continue reading to view upcoming releases:
 v0.7.0, on 6th, April 2022 The Open Cluster Management team is exicted to announce the release of OCM v0.7.0! We mainly focused on enhancing user experience in this release by introducing a bunch of new commands in clusteradm. Notable changes including:
- APIs including placement, placementdecision, managedclusterset and managedclustersetbinding are upgraded to v1beta1, v1alpha1 version of these APIs are deprecated and will be removed in the next release.</description>
+ APIs including placement, placementdecision, managedclusterset and managedclustersetbinding are upgraded to v1beta1, v1alpha1 version of these APIs are deprecated and will be removed in the future.</description>
     </item>
     
     <item>
@@ -120,7 +120,7 @@ Ensure golang is installed, if you are planning to install from the source.</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://open-cluster-management.io/zh/concepts/managedclusterset/</guid>
-      <description>What is ManagedClusterSet? Operates ManagedClusterSet using clusteradm  Creating a ManagedClusterSet Adding a ManagedCluster to a ManagedClusterSet Bind the clusterset to a workspace namespace   A glance at the &amp;ldquo;ManagedClusterSet&amp;rdquo; API  Clusterset RBAC permission control  Adding member cluster to a clusterset Binding a clusterset to a namespace     Default ManagedClusterSet     What is ManagedClusterSet? ManagedClusterSet is a cluster scoped API in the hub cluster for grouping a few managed clusters into a &amp;ldquo;set&amp;rdquo; so that hub admin can operate these clusters altogether in a higher level.</description>
+      <description>What is ManagedClusterSet? Operates ManagedClusterSet using clusteradm  Creating a ManagedClusterSet Adding a ManagedCluster to a ManagedClusterSet Bind the clusterset to a workspace namespace   A glance at the &amp;ldquo;ManagedClusterSet&amp;rdquo; API  Clusterset RBAC permission control  Adding member cluster to a clusterset Binding a clusterset to a namespace     Default ManagedClusterSet Global ManagedClusterSet     What is ManagedClusterSet? ManagedClusterSet is a cluster scoped API in the hub cluster for grouping a few managed clusters into a &amp;ldquo;set&amp;rdquo; so that hub admin can operate these clusters altogether in a higher level.</description>
     </item>
     
     <item>
@@ -138,7 +138,7 @@ Ensure golang is installed, if you are planning to install from the source.</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://open-cluster-management.io/zh/concepts/placement/</guid>
-      <description>Overall Select clusters in ManagedClusterSet  Predicates  Label/Claim selection Taints/Tolerations   Prioritizers  Score-based prioritizer     Extensible scheduling Future work     API-CHANGE NOTE: Placement and PlacementDecision API is upgraded from v1alpha1 to v1beta1, v1alpha1 will be deprecated in OCM v0.7.0 and planned to be removed in OCM v0.8.0. The field spec.prioritizerPolicy.configurations.name in Placement API v1alpha1 is removed and replaced by spec.</description>
+      <description>Overall Select clusters in ManagedClusterSet  Predicates  Label/Claim selection Taints/Tolerations   Prioritizers  Score-based prioritizer     Extensible scheduling Future work     API-CHANGE NOTE: Placement and PlacementDecision API is upgraded from v1alpha1 to v1beta1, v1alpha1 will be deprecated in OCM v0.7.0 and planned to be removed in the future. The field spec.prioritizerPolicy.configurations.name in Placement API v1alpha1 is removed and replaced by spec.</description>
     </item>
     
     <item>
@@ -162,6 +162,16 @@ Ensure golang is installed, if you are planning to install from the source.</des
 Prerequisite You must meet the following prerequisites to install the application lifecycle management add-on:
   Ensure kubectl and kustomize are installed.
   Ensure the open-cluster-management cluster manager is installed.</description>
+    </item>
+    
+    <item>
+      <title>Policy</title>
+      <link>http://open-cluster-management.io/zh/concepts/policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://open-cluster-management.io/zh/concepts/policy/</guid>
+      <description>Overview Policy PlacementBinding PolicySet Policy Templates  Hub cluster templates Template encryption details Template functions       Overview The policy framework has the following API concepts:
+ Policy Templates are the policies that perform a desired check or action. For example, ConfigurationPolicy objects are embedded in Policy objects under the policy-templates array. These cannot be deployed to managed clusters on their own. A Policy is a grouping mechanism for Policy Templates and is the smallest deployable unit on the hub cluster.</description>
     </item>
     
     <item>
@@ -190,7 +200,7 @@ Prerequisite You must meet the following prerequisites to install the applicatio
       
       <guid>http://open-cluster-management.io/zh/getting-started/integration/policy-framework/</guid>
       <description>The policy framework provides governance capabilities to OCM managed Kubernetes clusters. Policies provide visibility and drive remediation for various security and configuration aspects to help IT administrators meet their requirements.
-   API Concepts  Overview Policy PlacementBinding PolicySet   Architecture Prerequisite Install the policy-framework hub components  Install via Clusteradm CLI Install from source   Verify the installation Deploy the synchronization components to the managed cluster(s) What is next     API Concepts Overview The policy framework has the following API concepts:</description>
+   API Concepts Architecture Prerequisite Install the policy-framework hub components  Install via Clusteradm CLI Install from source   Verify the installation Deploy the synchronization components to the managed cluster(s) What is next     API Concepts View the Policy API page for additional details about the Policy API managed by the Policy Framework components, including:</description>
     </item>
     
     <item>

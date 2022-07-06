@@ -90,6 +90,10 @@
     </url>
     
     <url>
+        <loc>http://open-cluster-management.io/zh/concepts/policy</loc>
+    </url>
+    
+    <url>
         <loc>http://open-cluster-management.io/zh/getting-started/integration/cluster-proxy</loc>
     </url>
     
@@ -147,6 +151,9 @@
     </url>
     <url>
         <loc>http://open-cluster-management.io/governance-policy-addon-controller?go-get=1</loc>
+    </url>
+    <url>
+        <loc>http://open-cluster-management.io/governance-policy-nucleus?go-get=1</loc>
     </url>
     <url>
         <loc>http://open-cluster-management.io/governance-policy-propagator?go-get=1</loc>
